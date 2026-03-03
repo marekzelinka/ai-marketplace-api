@@ -1,0 +1,30 @@
+[project]
+name = "ai-marketplace-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=6.0.3",
+    "django-stubs-ext>=5.2.9",
+    "django-types>=0.23.0",
+    "djangorestframework>=3.16.1",
+    "psycopg[binary]>=3.3.3",
+    "python-decouple>=3.8",
+]
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]
+project-excludes = ["**/migrations/*.py"]
+
+[tool.ruff]
+extend-exclude = ["**/migrations/*.py"]
+
+[dependency-groups]
+dev = [
+    "pyrefly>=0.55.0",
+    "ruff>=0.15.4",
+]
