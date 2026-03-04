@@ -1,6 +1,13 @@
 # AI Marketplace REST API
 
-A robust RESTful API for an AI Model Marketplace using **Django**, **Django REST Framework**, and **Postgres** (via Neon).
+A robust RESTful API for an AI Model Marketplace using **Django**, **Django REST Framework**, and Neon's serverless **Postgres** (via **Django ORM**).
+
+## Worklog
+
+- [ ] user authentication
+- [ ] advanced search and filtering
+- [ ] better model versioning
+- [ ] integration with payment systems
 
 ## Tech Stack
 
