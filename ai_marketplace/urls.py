@@ -20,5 +20,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # Include the Models API URLs:
     path("api/", include("models_api.urls")),
 ]

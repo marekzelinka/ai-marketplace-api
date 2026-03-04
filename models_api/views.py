@@ -5,11 +5,18 @@ from rest_framework.decorators import action
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from models_api.models import AIModel, ModelAuthor
+from models_api.models import (
+    AIModel,
+    ModelAuthor,
+    ModelBenchmark,
+    ModelPurchase,
+    UsageScenario,
+)
 from models_api.serializers import (
     AIModelSerializer,
     ModelAuthorSerializer,
     ModelBenchmarkSerializer,
+    ModelPurchaseSerializer,
     UsageScenarioSerializer,
 )
 
@@ -46,3 +53,18 @@ class AIModelViewSet(viewsets.ModelViewSet):
         serializer = ModelBenchmarkSerializer(benchmarks, many=True)
 
         return Response(serializer.data)
+
+
+class ModelPurchaseViewSet(viewsets.ModelViewSet):
+    queryset = ModelPurchase.objects.all()
+    serializer_class = ModelPurchaseSerializer
+
+
+class UsageScenarioViewSet(viewsets.ModelViewSet):
+    queryset = UsageScenario.objects.all()
+    serializer_class = UsageScenarioSerializer
+
+
+class ModelBenchmarkViewSet(viewsets.ModelViewSet):
+    queryset = ModelBenchmark.objects.all()
+    serializer_class = ModelBenchmarkSerializer
